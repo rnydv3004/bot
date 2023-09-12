@@ -1,0 +1,764 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "nlu": {
+      "log": true
+    },
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager",
+      "log": true
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "for,goodby,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "later,okay,see,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "howdi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "about,you": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "about,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "is,taxmechan,what": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "concern,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "regard,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "in,relat,taxmechan,to": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "pertain,taxmechan,to": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "respect,taxmechan,to,with": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "about,is,servic,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "detail,is,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "inform,is,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "is,offer,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          },
+          "is,profil,taxmechan": {
+            "intent": "taxmechanic.about",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.bye": "default",
+          "greetings.hello": "default",
+          "taxmechanic.about": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "goodbye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye bye take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "okay see you later",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "howdy",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "about you",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "about Taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Concerning Taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Regarding Taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "In relation to Taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Pertaining to Taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "With respect to Taxmechanic",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "About Taxmechanic's services",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Taxmechanic's details",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Taxmechanic's information",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Taxmechanic's offerings",
+            "intent": "taxmechanic.about"
+          },
+          {
+            "domain": "default",
+            "utterance": "Taxmechanic's profile",
+            "intent": "taxmechanic.about"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "goodby": 1,
+              "for": 1,
+              "now": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "okay": 1,
+              "see": 1,
+              "you": 1,
+              "later": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "hello": 1,
+              "hi": 1,
+              "howdi": 1,
+              "about": 1,
+              "taxmechan": 1,
+              "what": 1,
+              "is": 1,
+              "concern": 1,
+              "regard": 1,
+              "in": 1,
+              "relat": 1,
+              "to": 1,
+              "pertain": 1,
+              "with": 1,
+              "respect": 1,
+              "servic": 1,
+              "detail": 1,
+              "inform": 1,
+              "offer": 1,
+              "profil": 1
+            },
+            "intents": {
+              "greetings.bye": 1,
+              "greetings.hello": 1,
+              "taxmechanic.about": 1
+            },
+            "intentFeatures": {
+              "greetings.bye": {
+                "goodby": 1,
+                "for": 1,
+                "now": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "okay": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1
+              },
+              "greetings.hello": {
+                "hello": 1,
+                "hi": 1,
+                "howdi": 1
+              },
+              "taxmechanic.about": {
+                "about": 1,
+                "you": 1,
+                "taxmechan": 1,
+                "what": 1,
+                "is": 1,
+                "concern": 1,
+                "regard": 1,
+                "in": 1,
+                "relat": 1,
+                "to": 1,
+                "pertain": 1,
+                "with": 1,
+                "respect": 1,
+                "servic": 1,
+                "detail": 1,
+                "inform": 1,
+                "offer": 1,
+                "profil": 1
+              }
+            },
+            "featuresToIntent": {
+              "goodby": [
+                "greetings.bye"
+              ],
+              "for": [
+                "greetings.bye"
+              ],
+              "now": [
+                "greetings.bye"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "okay": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "you": [
+                "greetings.bye",
+                "taxmechanic.about"
+              ],
+              "later": [
+                "greetings.bye"
+              ],
+              "i": [
+                "greetings.bye"
+              ],
+              "must": [
+                "greetings.bye"
+              ],
+              "go": [
+                "greetings.bye"
+              ],
+              "hello": [
+                "greetings.hello"
+              ],
+              "hi": [
+                "greetings.hello"
+              ],
+              "howdi": [
+                "greetings.hello"
+              ],
+              "about": [
+                "taxmechanic.about"
+              ],
+              "taxmechan": [
+                "taxmechanic.about"
+              ],
+              "what": [
+                "taxmechanic.about"
+              ],
+              "is": [
+                "taxmechanic.about"
+              ],
+              "concern": [
+                "taxmechanic.about"
+              ],
+              "regard": [
+                "taxmechanic.about"
+              ],
+              "in": [
+                "taxmechanic.about"
+              ],
+              "relat": [
+                "taxmechanic.about"
+              ],
+              "to": [
+                "taxmechanic.about"
+              ],
+              "pertain": [
+                "taxmechanic.about"
+              ],
+              "with": [
+                "taxmechanic.about"
+              ],
+              "respect": [
+                "taxmechanic.about"
+              ],
+              "servic": [
+                "taxmechanic.about"
+              ],
+              "detail": [
+                "taxmechanic.about"
+              ],
+              "inform": [
+                "taxmechanic.about"
+              ],
+              "offer": [
+                "taxmechanic.about"
+              ],
+              "profil": [
+                "taxmechanic.about"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "log": true,
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true
+              },
+              "features": [
+                "goodby",
+                "for",
+                "now",
+                "bye",
+                "take",
+                "care",
+                "okay",
+                "see",
+                "you",
+                "later",
+                "i",
+                "must",
+                "go",
+                "hello",
+                "hi",
+                "howdi",
+                "about",
+                "taxmechan",
+                "what",
+                "is",
+                "concern",
+                "regard",
+                "in",
+                "relat",
+                "to",
+                "pertain",
+                "with",
+                "respect",
+                "servic",
+                "detail",
+                "inform",
+                "offer",
+                "profil"
+              ],
+              "intents": [
+                "greetings.bye",
+                "greetings.hello",
+                "taxmechanic.about"
+              ],
+              "perceptrons": [
+                [
+                  4.05349063873291,
+                  4.053531169891357,
+                  4.053531169891357,
+                  4.053554058074951,
+                  4.053507328033447,
+                  4.053507328033447,
+                  3.7329187393188477,
+                  3.7329187393188477,
+                  0.9618247151374817,
+                  3.7329187393188477,
+                  4.053528785705566,
+                  4.053528785705566,
+                  4.053528785705566,
+                  -2.1251280307769775,
+                  -2.1251273155212402,
+                  -2.125126600265503,
+                  -3.0869531631469727,
+                  -2.4807913303375244,
+                  -0.21050947904586792,
+                  -0.546662449836731,
+                  -0.31794360280036926,
+                  -0.2835443317890167,
+                  -0.13943055272102356,
+                  -0.13943055272102356,
+                  -0.4392791986465454,
+                  -0.13911172747612,
+                  -0.08891629427671432,
+                  -0.08891629427671432,
+                  -0.015582975000143051,
+                  -0.06936800479888916,
+                  -0.052823565900325775,
+                  -0.039611123502254486,
+                  -0.033876050263643265,
+                  2.12512987690946
+                ],
+                [
+                  -1.5861327648162842,
+                  -2.047248125076294,
+                  -2.047248125076294,
+                  -2.2009544372558594,
+                  -1.7398372888565063,
+                  -1.7398372888565063,
+                  -0.877406895160675,
+                  -0.877406895160675,
+                  -3.092736005783081,
+                  -0.877406895160675,
+                  -1.893543004989624,
+                  -1.893543004989624,
+                  -1.893543004989624,
+                  8.605081558227539,
+                  8.605081558227539,
+                  8.605080604553223,
+                  -2.5884127616882324,
+                  -5.680626392364502,
+                  -0.33350372314453125,
+                  -0.7480192184448242,
+                  -0.7408689856529236,
+                  -0.6989526748657227,
+                  -0.19490744173526764,
+                  -0.19490744173526764,
+                  -0.5957939028739929,
+                  -0.24526137113571167,
+                  -0.14399628341197968,
+                  -0.14399628341197968,
+                  -0.016969451680779457,
+                  -0.11942625790834427,
+                  -0.09861267358064651,
+                  -0.08379185199737549,
+                  -0.07151778787374496,
+                  5.680629857496435
+                ],
+                [
+                  -0.8456123471260071,
+                  -1.2409621477127075,
+                  -1.2409621477127075,
+                  -1.372629165649414,
+                  -0.9772790670394897,
+                  -0.9772790670394897,
+                  -4.317756652832031,
+                  -4.317756652832031,
+                  9.668395042419434,
+                  -4.317756652832031,
+                  -1.1082991361618042,
+                  -1.1082991361618042,
+                  -1.1082991361618042,
+                  -3.3033127784729004,
+                  -3.3020412921905518,
+                  -3.300762176513672,
+                  1.112742304801941,
+                  10.241497993469238,
+                  0.2791168987751007,
+                  0.4454432725906372,
+                  0.7711454629898071,
+                  0.7734454274177551,
+                  0.11444303393363953,
+                  0.11444303393363953,
+                  0.47723573446273804,
+                  0.24692967534065247,
+                  0.11854640394449234,
+                  0.11854640394449234,
+                  -0.9586388468742371,
+                  0.2784253656864166,
+                  0.2787647843360901,
+                  0.28218889236450195,
+                  0.28720343112945557,
+                  3.336789188703123
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "goodbye for now"
+      ],
+      [
+        "en",
+        "bye bye take care"
+      ],
+      [
+        "en",
+        "okay see you later"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "about you"
+      ],
+      [
+        "en",
+        "about Taxmechanic"
+      ],
+      [
+        "en",
+        "Taxmechanic"
+      ],
+      [
+        "en",
+        "what is taxmechanic"
+      ],
+      [
+        "en",
+        "Concerning Taxmechanic"
+      ],
+      [
+        "en",
+        "Regarding Taxmechanic"
+      ],
+      [
+        "en",
+        "In relation to Taxmechanic"
+      ],
+      [
+        "en",
+        "Pertaining to Taxmechanic"
+      ],
+      [
+        "en",
+        "With respect to Taxmechanic"
+      ],
+      [
+        "en",
+        "About Taxmechanic's services"
+      ],
+      [
+        "en",
+        "Taxmechanic's details"
+      ],
+      [
+        "en",
+        "Taxmechanic's information"
+      ],
+      [
+        "en",
+        "Taxmechanic's offerings"
+      ],
+      [
+        "en",
+        "Taxmechanic's profile"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greetings.bye": [
+          {
+            "answer": "Till next time"
+          },
+          {
+            "answer": "see you soon!"
+          }
+        ],
+        "greetings.hello": [
+          {
+            "answer": "Hey there!"
+          },
+          {
+            "answer": "Greetings!"
+          }
+        ],
+        "taxmechanic.about": [
+          {
+            "answer": "Taxmechanic is a boutique accounting firm in Toronto, Canada. We strive to provide clarity and guide our clients towards financial success, acting as a beacon to navigate the complexities of the tax landscape."
+          },
+          {
+            "answer": "Taxmechanic, a boutique accounting firm in Toronto, Canada, aims to illuminate the tax landscape and steer clients toward financial success."
+          },
+          {
+            "answer": "Taxmechanic, located in Toronto, Canada, is a boutique accounting firm dedicated to shedding light on the intricacies of taxation and leading clients toward financial prosperity."
+          },
+          {
+            "answer": "In Toronto, Canada, Taxmechanic, a boutique accounting firm, serves as a guiding light, helping clients navigate the intricacies of tax matters for financial success."
+          },
+          {
+            "answer": "Taxmechanic, a boutique accounting firm in Toronto, Canada, acts as a guiding beacon in the complex world of taxes, aiming to ensure clients' financial success."
+          },
+          {
+            "answer": "Based in Toronto, Canada, Taxmechanic is a boutique accounting firm that aspires to bring clarity to the tax landscape and lead clients to financial success."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
